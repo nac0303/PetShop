@@ -218,7 +218,11 @@ header{
 }
 
 .card:hover{
-	opacity: 0.8;
+	opacity: .7;
+    transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -webkit-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
 }
 
 .card:hover .btn-card{
