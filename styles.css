@@ -20,6 +20,15 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+:root{
+	--color1: #FFFFFF;
+	--color2: #FFDE59;
+	--color3: #FFCD1B;
+	--color4: #B1DBEE;
+	--color5: #4AACD8;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -67,7 +76,7 @@ button{
 header{
     height: 100px;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -187,6 +196,11 @@ header{
 		margin-right: 0;
 		width: max-content
 	}
+
+	.card{
+		display: flex;
+		flex-direction: column;
+	}
   }
 
   @media (max-width:300px){
@@ -194,3 +208,72 @@ header{
 		opacity: 0;
 	}
   }
+
+
+/* ---CARDS--- */
+
+.container-cards{
+	display: flex;
+	flex-direction: row;
+	gap: 5rem;
+	padding: 0 5rem;
+	justify-content: center;
+}
+
+.course-selection{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.course-selection > h1{
+	font-family: 'Grandstander', sans-serif;
+	font-size: 100px;
+	color: var(--color5);
+	padding: 5rem;
+}
+
+.card{
+	width: 270px;
+	height: 405px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 5rem;
+}
+
+.card > h1{
+	font-family: 'Fredoka One', cursive;
+	font-size: 32px;
+	color: white;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.btn-card{
+	display: none;
+	outline: none;
+	border: none;
+	font-family: 'Montserrat';
+	justify-content: center;
+	width: 80%;
+	font-size: 20px;
+	border-radius: 30px;
+	padding: 15px;
+	background-color: #4AACD8;
+	color: var(--color1);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0 auto;
+    cursor: pointer;
+	margin-bottom: 30px;
+}
+
+.card:hover{
+	opacity: 0.8;
+}
+
+.card:hover .btn-card{
+	display: block;
+}
+
