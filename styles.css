@@ -67,7 +67,7 @@ button{
 header{
     height: 100px;
     width: 100%;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(255, 255, 255);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -108,8 +108,8 @@ header{
 
 .blob{
 	position: absolute;
-	transform: scale(1.9);
-	right: 250px;
+	transform: scale(2);
+	right: 30%;
 	z-index: 0;
 }
 
@@ -119,11 +119,12 @@ header{
 	bottom: 65%;
 	left: 15%;
 	height: 35%;
+	z-index: 2;
 }
 .text-banner{
 	max-width: 440px;
 	z-index: 2;
-	margin-right: 100px;
+	margin-right: 25%;
 	font-family: 'Fredoka One', cursive;
 	color: white;
 	font-size: 50px;
@@ -137,5 +138,59 @@ header{
 	z-index: 2;
 	color: white;
 	background-color: #FFCD1B;
-	margin-right: 110px;
+	margin-right: 25%;
+	width: max-content
 }
+
+/* RESPONSIVIDADE BANNER */
+
+@media (max-width:1800px){
+	.text-banner{
+		max-width: 330px;
+	}
+  }
+
+@media (max-width:1600px){
+	.dog{
+		left: 5%;
+	}
+	.traces{
+		left: 5%;
+	}
+  }
+
+@media (max-width:1400px){
+
+
+  }
+@media (max-width:500px){
+	.banner{
+		justify-content: flex-start;
+		align-items: center;
+		padding: 90px 20px;
+	}
+	.dog{
+		left: auto;
+		right: 25%;
+		height: 40%;
+	}
+	.traces{
+		opacity: 0;
+	}
+	.text-banner{
+		margin-right: 0;
+	}
+	.banner>button{
+		z-index: 2;
+		color: white;
+		background-color: #FFCD1B;
+		margin-right: 0;
+		width: max-content
+	}
+  }
+
+  @media (max-width:300px){
+	.dog{
+		opacity: 0;
+	}
+  }
