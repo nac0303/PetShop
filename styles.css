@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700;900&display=swap');
+
 /* RESET */
 
 html, body, div, span, applet, object, iframe,
@@ -27,6 +29,8 @@ time, mark, audio, video {
 	--color3: #FFCD1B;
 	--color4: #B1DBEE;
 	--color5: #4AACD8;
+	--color6: #525252;
+	--color7: #9c9c9c;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -155,9 +159,6 @@ header{
 /* ---CARDS--- */
 
 .container-cards{
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -189,7 +190,10 @@ header{
 	justify-content: space-between;
 	margin-bottom: 5rem;
 }
-
+.card > img{
+	width: 100%;
+	height: 100%;
+}
 .card > h1{
 	font-family: 'Fredoka One', cursive;
 	font-size: 32px;
@@ -218,7 +222,7 @@ header{
 }
 
 .card:hover{
-	opacity: .7;
+	
     transition: opacity .3s ease-out;
     -moz-transition: opacity .3s ease-out;
     -webkit-transition: opacity .3s ease-out;
@@ -304,11 +308,60 @@ header{
 	width: 100%;
 	height: 100%;
 	background-color: var(--color1);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 .cards-review{
 	width: 382px;
 	height: 540px;
-	background-color: rgb(243, 243, 243);
+	background-color: var(--color1);
 	border: none;
-	border-radius: 20px;
+	border-radius: 25px;
+	margin: 5rem;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.cards-review-top{
+	width: 100%;
+	height: 25%;
+	background-color: var(--color2);
+	border-radius: 25px 25px 0 0;
+	z-index: -1;
+}
+
+.cards-review .avatar > img{
+	display: flex;
+	margin: auto;
+	margin-top: -5.5rem;
+}
+
+.cards-review .stars > img{
+	display: flex;
+	margin: auto;
+	margin-top: 1rem;
+	width: 50%;
+}
+
+.cards-review > h1{
+	margin-top: 1rem;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 32px;
+	color: var(--color6);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.cards-review > h2{
+	margin-top: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20;
+	font-weight: 300;
+	color: var(--color6);
+	text-align: center;
+	margin: 1rem;
 }
