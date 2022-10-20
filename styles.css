@@ -332,12 +332,14 @@ header{
 	-webkit-box-sizing: border-box;
 }
 .cards-review{
-	width: 382px;
-	height: 540px;
+	width: 250px;
+	height: 400px;
 	background-color: var(--color1);
 	border-left:0.5px solid #f7f7f7;
 	border-radius: 25px;
-	margin: 5rem;
+	margin: 3rem;
+	margin-top: 0rem;
+	margin-bottom: 5rem;
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 	z-index: 0;
 }
@@ -353,33 +355,32 @@ header{
 .cards-review .avatar > img{
 	display: flex;
 	margin: auto;
-	margin-top: -5.5rem;
+	margin-top: -4rem;
+	width: 50%;
 }
 
 .cards-review .stars > img{
 	display: flex;
 	margin: auto;
 	margin-top: 1rem;
-	width: 50%;
+	width: 35%;
 }
 
 .cards-review > h1{
 	margin-top: 1rem;
 	font-family: 'Fredoka One', sans-serif;
-	font-size: 32px;
+	font-size: 18px;
 	color: var(--color6);
 	text-transform: uppercase;
 	text-align: center;
 }
 
 .cards-review > h2{
-	margin-top: 1rem;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 20;
 	font-weight: 300;
 	color: var(--color6);
 	text-align: center;
-	margin: 1rem;
 }
 
 .all-review > h1{
