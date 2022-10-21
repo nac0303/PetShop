@@ -173,7 +173,6 @@ header{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 
 .course-selection > h1{
@@ -295,22 +294,35 @@ header{
 
 .course{
 	width: 100%;
-	height: 100%;
-	background-color: var(--color5);
-
+	height: 80%;
+	background-color: #5CB4DC;
+	display: flex;
+	flex-direction: row;
 }
 
 .course > img{
+	width: 40%;
+	margin: auto;
+}
+
+.text{
 	width: 50%;
-	position: absolute;
-	right: 0;
+	height: 100%;
+	display: flex;
+	margin-left: 8rem;
+	
 }
-
-.course > h1{
+.text > h1{
 	font-family: 'Fredoka One', sans-serif;
-	font-size: 36px;
+	font-size: 45px;
+	margin: auto;
+	color: var(--color1);
+	line-height: 4rem;
 }
 
+.text > h1 > span{
+	color: var(--color2);
+}
 
 /* --- REVIEW ---*/
 .all-review{
@@ -318,6 +330,7 @@ header{
 	flex-direction: column;
 	align-items: center;
 }
+
 
 .review{
 	width: 100%;
@@ -342,6 +355,10 @@ header{
 	margin-bottom: 5rem;
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 	z-index: 0;
+}
+
+.all-review > h1{
+	text-transform: uppercase;
 }
 
 .cards-review-top{
@@ -390,38 +407,142 @@ header{
 	padding: 5rem;
 }
 
-.footer{
+
+/* --- BUY ---*/
+
+.buy{
 	width: 100%;
-	height: 40%;
+	height: 100%;
+
+}
+
+.buy > video{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* --- FOOTER --- */
+footer{
+	width: 100%;
+	height: 50%;
 	background-color: var(--color5);
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 0;
 }
 
-.column1 > img{
-	width: 70%;
-	margin-left: 1rem;
+.columns{
+	width: 95%;
+	height: 75%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
 }
-footer .line{
-	background-color: var(--color1);
-	width: 90%;
-	height: 0.1%;
-	justify-content: center;
-	margin: 0 auto;
-}
-
 
 .column1{
-	width: 30%;
+	width: 34%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
+.column2{
+	width: 33%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.column2 li.title{
+	color: white;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 50px;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.column2 li.subtitle{
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+	font-weight: lighter;
+	display: flex;
+	margin-bottom: 1.5rem;
+}
+.column3{
+	width: 33%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.column3 li.title{
+	color: white;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 50px;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.column3 li.subtitle{
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+	font-weight: lighter;
+	display: flex;
+	margin-bottom: 1.5rem;
+}
+
+.top-line{
+	width: 95%;
+	height: 0.1%;
+	background-color: var(--color1);
+	margin: auto;
+	margin-top: 3rem; 
+	margin-bottom: 0rem;
+}
+
+.bottom-line{
+	width: 95%;
+	height: 0.1%;
+	background-color: var(--color1);
+	margin: auto;
+	margin-top: 0rem;
+	margin-bottom: 3rem; 
+}
+
+.column1 > img{
+	width: 85%;
+	margin: 0 auto;
+}
+
 .icons{
 	margin: 0 auto;
-	justify-content: space-between;
-	margin-top: 9rem;
+
 }
+.column1 .icons{
+	display: flex;
+	gap: 5rem;
+}
+
+.dns{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 18%;
+}
+
+.dns > img{
+	width: 20%;
+	margin: auto;
+}
+/* .dns > h1{
+	color: var(--color1);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+	margin: auto;
+} */
 
