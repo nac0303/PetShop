@@ -156,6 +156,10 @@ header{
 	width: max-content
 }
 
+.banner>button :hover{
+	transform: scale(1.6);
+}
+
 
 /* ---CARDS--- */
 
