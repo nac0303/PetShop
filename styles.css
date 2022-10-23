@@ -231,6 +231,7 @@ header{
     -moz-transition: opacity .3s ease-out;
     -webkit-transition: opacity .3s ease-out;
     -o-transition: opacity .3s ease-out;
+	opacity: 0.8;
 }
 
 .card:hover .btn-card{
@@ -251,6 +252,10 @@ header{
 	}
 	.traces{
 		left: 5%;
+	}
+
+	.course > img{
+		display: none;
 	}
   }
 
@@ -293,6 +298,12 @@ header{
 	.dog{
 		opacity: 0;
 	}
+
+	.course{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
   }
 /* --- COURSE --- */
 
@@ -311,6 +322,7 @@ header{
 .course > img{
 	width: 40%;
 	margin: auto;
+	display: block;
 }
 
 .text{
@@ -336,6 +348,10 @@ header{
 	margin-right: 5rem;
 	background-color: var(--color3);
 	color: #ffffff;
+}
+
+button:hover{
+	background-color: #fcd22a;
 }
 
 .text > h1 > span{
@@ -457,6 +473,11 @@ header{
 	font-size:40px;
 }
 
+.buy > h1 > span{
+	color: var(--cor5);
+}
+
+
 
 /* --- FOOTER --- */
 footer{
@@ -574,15 +595,6 @@ footer{
 	width: 20%;
 	margin: auto;
 }
-/* .dns > h1{
-	color: var(--color1);
-	font-family: 'Montserrat', sans-serif;
-	font-size: 25px;
-	margin: auto;
-} */
-
-
-
 
 .carousel-wrap {
     margin: 90px auto;
