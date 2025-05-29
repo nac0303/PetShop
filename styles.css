@@ -628,3 +628,53 @@ footer{
   .owl-nav .owl-next {
     right: -30px;
   }
+
+
+  @media (max-width: 600px) {
+	footer{
+		height: 80%;
+	}
+
+  /* Make fonts smaller */
+  .column2 li.title,
+  .column3 li.title {
+    font-size: 30px;
+  }
+  
+  .column2 li.subtitle,
+  .column3 li.subtitle {
+    font-size: 16px;
+  }
+
+  /* Stack icons vertically and reduce size */
+  .column1 .icons {
+    flex-direction: row;
+    width: fit-content;
+    margin: 1rem auto;
+  }
+
+  .column1 .icons img {
+    width: 30px; /* smaller icon size */
+    height: auto;
+  }
+
+  /* Hide the main image */
+  .column1 > img {
+    display: none;
+  }
+
+  /* Adjust columns stacking (optional) */
+  .columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    height: auto; /* to avoid fixed height issues */
+  }
+  
+  .column1, .column2, .column3 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+}
