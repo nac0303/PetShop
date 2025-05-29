@@ -95,7 +95,7 @@ header{
 
 /* BANNER */
 
-.banner{
+/* .banner{
 	display: flex;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -110,7 +110,24 @@ header{
 	justify-content: center;
 	overflow: hidden;
 	gap: 40px;
+} */
+
+.banner {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 220px;
+  flex-direction: column;
+  height: 60vh;      /* menor altura */
+  min-height: 400px; /* evita banner muito pequeno */
+  width: 100%;
+  background-color: #FFDE59;
+  align-items: flex-end;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+  gap: 40px;
 }
+
 
 .dog{
 	position: absolute;
@@ -396,13 +413,14 @@ button:hover{
 	text-transform: uppercase;
 }
 
-.cards-review-top{
+/* .cards-review-top{
 	width: 100%;
 	height: 25%;
 	background-color: var(--color2);
 	border-radius: 25px 25px 0 0;
 	z-index: 1;
-}
+} */
+
 
 .cards-review .avatar > img{
 	display: flex;
@@ -440,7 +458,6 @@ button:hover{
 	font-family: 'Grandstander', sans-serif;
 	font-size: 100px;
 	color: var(--color5);
-	padding-top: 5rem;
 }
 
 
@@ -629,52 +646,1045 @@ footer{
     right: -30px;
   }
 
+/* === Responsividade para telas até 480px (iPhone) === */
 
-  @media (max-width: 600px) {
-	footer{
-		height: 80%;
-	}
+@media (max-width: 480px) {
 
-  /* Make fonts smaller */
+  /* HEADER */
+  header {
+    height: 60px;
+    padding: 0 15px;
+  }
+  .logo > img {
+    height: 50px;
+  }
+
+  /* BANNER */
+  .banner {
+    padding: 50px 15px 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+  }
+  .text-banner {
+    font-size: 28px;
+    max-width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    z-index: 10;
+  }
+  .banner > button {
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    display: block;
+  }
+  .dog {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    height: 35%;
+    left: auto;
+    z-index: 1;
+  }
+  .traces {
+    position: absolute;
+    bottom: 65%;
+    left: 10%;
+    height: 25%;
+    opacity: 0.6;
+    z-index: 2;
+  }
+  .blob {
+    position: absolute;
+    right: 20%;
+    transform: scale(1.5);
+    z-index: 0;
+  }
+
+  /* CARDS */
+  .container-cards {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 10px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .course-selection > h1 {
+    font-size: 52PX;
+    text-align: center;
+  }
+  .card {
+    width: 90vw;
+    max-width: 320px;
+    height: 180px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+  .card > h1 {
+    font-size: 18px !important;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .btn-card {
+    display: block;
+    width: 60%;
+    padding: 8px 0;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: var(--color5);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: auto;
+  }
+
+  /* COURSE */
+  .course {
+    flex-direction: column;
+    background-position: center;
+    background-size: contain;
+    padding: 20px 10px 40px;
+    height: auto;
+  }
+  .course > img {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+  .text {
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+    gap: 1rem;
+  }
+  .text > h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--color1);
+  }
+  .text > button {
+    align-self: center;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 30px;
+  }
+
+  /* REVIEW */
+  .all-review > h1 {
+    font-size: 40px;
+    /* padding: 2rem 0 1rem; */
+    text-align: center;
+  }
+  .review {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .cards-review {
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    margin: 1rem 0;
+    box-shadow: rgba(46, 46, 46, 0.1) 0 0 8px 3px;
+  }
+  .cards-review > h1 {
+    font-size: 16px;
+  }
+  .cards-review > h2 {
+    font-size: 14px;
+    padding: 0 10px 20px;
+  }
+  .cards-review .avatar > img {
+    width: 60%;
+    margin-top: -3rem;
+  }
+  .cards-review .stars > img {
+    width: 40%;
+    margin-top: 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    height: auto;
+    padding: 20px 10px 40px;
+  }
+  .columns {
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .column1,
+  .column2,
+  .column3 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
   .column2 li.title,
   .column3 li.title {
-    font-size: 30px;
+    font-size: 28px;
   }
-  
   .column2 li.subtitle,
   .column3 li.subtitle {
     font-size: 16px;
   }
-
-  /* Stack icons vertically and reduce size */
-  .column1 .icons {
-    flex-direction: row;
-    width: fit-content;
-    margin: 1rem auto;
-  }
-
-  .column1 .icons img {
-    width: 30px; /* smaller icon size */
-    height: auto;
-  }
-
-  /* Hide the main image */
   .column1 > img {
+    width: 60%;
+    margin: 0 auto 15px;
+    display: block;
+  }
+  .icons {
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  /* Esconde controles do carousel no mobile para simplicidade */
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next {
     display: none;
   }
+}
 
-  /* Adjust columns stacking (optional) */
-  .columns {
+@media (max-width: 480px) {
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de tamanhos iguais */
+    gap: 1.5rem;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-items: center; /* centraliza os cards dentro das células */
+  }
+
+  .card {
+    width: 140px; /* largura fixa para manter uniformidade */
+    height: 200px; /* altura proporcional */
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card > h1 {
+    font-size: 14px !important;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .btn-card {
+    width: 80%;
+    font-size: 12px;
+    padding: 8px 0;
+    border-radius: 20px;
+    background-color: var(--color5);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .course {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente o conteúdo */
+    align-items: center;     /* centraliza horizontalmente */
+    padding: 40px 20px 50px;
+    height: auto;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+  }
+
+  .text {
+    width: 100%;
+    max-width: 320px;
+    padding: 0 15px;
+    gap: 1.5rem;
+    margin-bottom: 30px; /* maior espaçamento entre texto e botão */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
-    height: auto; /* to avoid fixed height issues */
   }
-  
-  .column1, .column2, .column3 {
-    width: 100%;
-    height: auto;
+
+  .text > h1 {
+    font-size: 20px;
+    line-height: 1.4;
+    color: white;
+    margin-bottom: 20px; /* espaço entre texto e botão */
+  }
+
+  .text > button {
+    font-size: 16px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: max-content;
+  }
+
+  .course > img {
+    width: 80%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .course {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 40px 20px 50px;
+    height: auto;
+    background-position: center;
+    background-size: contain;
     text-align: center;
+  }
+
+  .text {
+    width: 90vw;
+    max-width: 320px;
+    padding: 0 15px;
+    gap: 1.5rem;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centraliza texto e botão */
+    justify-content: center;
+  }
+
+  .text > h1 {
+    font-size: 20px;
+    line-height: 1.4;
+    color: white;
+    margin: 0 auto 20px auto;
+  }
+
+  .course > img {
+    width: 120px;  /* imagem menor e centralizada */
+    max-width: 280px;
+    margin: 0 auto 20px auto;
+    display: block;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+
+  .text > button {
+    font-size: 16px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: max-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    width: 90vw !important;
+    max-width: 320px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text > h1 {
+    margin: 0 auto 20px auto !important; /* espaço embaixo do texto */
+    display: block;
+  }
+
+  .course > img {
+    width: 150px;  /* aumenta tamanho da imagem */
+    height: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    width: 90vw !important;
+    max-width: 320px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text > h1 {
+    margin: 0 auto 20px auto !important; /* espaço embaixo do texto */
+    display: block;
+  }
+
+  .course > img {
+    width: 300px;  /* aumenta tamanho da imagem */
+    height: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+}
+
+/* --- Avaliações --- */
+
+.all-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-top: 5rem;
+}
+
+.all-review > h1 {
+  font-family: 'Grandstander', sans-serif;
+  font-size: 100px;
+  color: var(--color5);
+  text-transform: uppercase;
+  /* margin-bottom: 2rem; */
+  text-align: center;
+}
+
+.review {
+  width: 100%;
+  max-width: 1200px; /* largura máxima para o container */
+  margin: 0 auto;    /* centraliza horizontalmente */
+  box-sizing: border-box;
+  padding: 0 1rem; /* espaçamento lateral */
+}
+
+/* Owl Carousel container */
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Cards das avaliações */
+.cards-review {
+  width: 250px;
+  min-height: 400px;
+  background-color: var(--color1);
+  border-radius: 25px;
+  box-shadow: rgba(46, 46, 46, 0.089) 0px 0px 10px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+  box-sizing: border-box;
+  margin: 0 10px; /* Espaçamento entre cards dentro do carrossel */
+}
+
+.cards-review-top {
+  width: 100%;
+  height: 25%;
+  /* background-color: var(--color2); */
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.cards-review .avatar > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -50px;
+  border: 5px solid var(--color2);
+}
+
+.cards-review .stars > img {
+  width: 120px;
+  margin-top: 1rem;
+}
+
+.cards-review > h1 {
+  margin: 1rem 0 0.5rem 0;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  color: var(--color6);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cards-review > h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color6);
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.4;
+}
+
+/* === Responsividade para telas até 480px (iPhone) === */
+@media (max-width: 480px) {
+
+  .all-review > h1 {
+    font-size: 40px;
+    /* padding: 2rem 0 1rem; */
+    text-align: center;
+  }
+
+  .review {
+    display: block; /* Para o OwlCarousel funcionar melhor no mobile */
+  }
+
+  .owl-carousel .item {
+    margin: 0 auto;
+  }
+
+  .cards-review {
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    margin: 1rem auto;
+    box-shadow: rgba(46, 46, 46, 0.1) 0 0 8px 3px;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .cards-review .avatar > img {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+  }
+
+  .cards-review .stars > img {
+    width: 90px;
+    margin-top: 1rem;
+  }
+
+  .cards-review > h1 {
+    font-size: 16px;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .cards-review > h2 {
+    font-size: 14px;
+    padding: 0 1rem;
+    line-height: 1.4;
+  }
+}
+
+
+/* Container geral da seção avaliações */
+.all-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.all-review > h1 {
+  font-family: 'Grandstander', cursive;
+  font-size: 100px;
+  color: var(--color5);
+  text-transform: uppercase;
+  /* margin-bottom: 2rem; */
+  text-align: center;
+}
+
+/* Carrossel */
+.owl-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cada item do carrossel */
+.owl-carousel .item {
+  display: flex !important;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* Card Avaliação */
+.cards-review {
+  width: 250px;
+  min-height: 400px;
+  background-color: var(--color1);
+  border-radius: 25px;
+  box-shadow: rgba(46, 46, 46, 0.09) 0px 0px 10px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.cards-review:hover {
+  transform: translateY(-10px);
+}
+
+/* Topo colorido do card */
+.cards-review-top {
+  width: 100%;
+  height: 25%;
+  /* background-color: var(--color2); */
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Avatar */
+.cards-review .avatar > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -50px;
+  border: 5px solid var(--color2);
+}
+
+/* Estrelas */
+.cards-review .stars > img {
+  width: 120px;
+  margin-top: 1rem;
+}
+
+/* Nome do avaliador */
+.cards-review > h1 {
+  margin: 1rem 0 0.5rem 0;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  color: var(--color6);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Texto da avaliação */
+.cards-review > h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color6);
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.4;
+}
+
+/* Navegação das setas */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* evita que bloqueie clique no conteúdo */
+  padding: 0 20px;
+  box-sizing: border-box;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  pointer-events: all;
+  background: rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  border-radius: 50%;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+  background: var(--color5);
+  color: white;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 480px) {
+  .all-review > h1 {
+    font-size: 40px;
+    /* padding: 2rem 0 1rem; */
+  }
+
+  .cards-review {
+    width: 90vw;
+    max-width: 340px;
+    min-height: auto;
+    margin: 1rem 0;
+    padding: 2rem 1rem 3rem;
+    box-shadow: rgba(46, 46, 46, 0.1) 0 0 8px 3px;
+  }
+
+  .cards-review .avatar > img {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+  }
+
+  .cards-review .stars > img {
+    width: 90px;
+    margin-top: 1rem;
+  }
+
+  .cards-review > h1 {
+    font-size: 16px;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .cards-review > h2 {
+    font-size: 14px;
+    padding: 0 1rem;
+    line-height: 1.4;
+  }
+}
+
+
+/* Esconde os dots do Owl Carousel */
+.owl-dots {
+  display: none !important;
+}
+
+/* Estilo das setas de navegação */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  padding: 0 20px;
+  box-sizing: border-box;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  border-radius: 50%;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+  background: var(--color5);
+  color: white;
+}
+
+/* Ajuste no posicionamento para mobile, se necessário */
+@media (max-width: 480px) {
+  .owl-nav {
+    padding: 0 10px;
+  }
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+}
+
+
+.cards-review {
+  width: 250px;
+  min-height: 400px;
+  background-color: var(--color1);
+  border-radius: 25px;
+  box-shadow: rgba(46, 46, 46, 0.09) 0px 0px 15px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 10px;
+}
+
+.cards-review:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(46, 46, 46, 0.2) 0px 10px 30px 10px;
+}
+
+
+
+.cards-review-top {
+  width: 100%;
+  height: 25%;
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 0; /* remove margem superior */
+  position: relative;
+  top: 0;
+  z-index: 2;
+}
+
+
+.cards-review .avatar > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -50px;
+  /* border: 5px solid var(--color2); */
+  position: relative;
+  z-index: 3; /* Colocar avatar acima da barra colorida */
+}
+
+.cards-review .stars > img {
+  width: 120px;
+  margin-top: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.cards-review > h1 {
+  margin: 1rem 0 0.5rem 0;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  color: var(--color6);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  z-index: 2;
+  position: relative;
+}
+
+.cards-review > h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color6);
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.4;
+  z-index: 2;
+  position: relative;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* para o conteúdo não bloquear clique */
+  padding: 0 20px;
+  box-sizing: border-box;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  pointer-events: all;
+  background: rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  border-radius: 50%;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+  background: var(--color5);
+  color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* BANNER */
+  .banner {
+    padding: 40px 80px;
+    height: 50vh;
+    min-height: 350px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .text-banner {
+    font-size: 36px;
+    max-width: 350px;
+    margin-right: 10%;
+  }
+
+  .banner > button {
+    font-size: 18px;
+    padding: 12px 30px;
+    margin-right: 10%;
+  }
+
+  .dog {
+    left: 10%;
+    height: 65%;
+  }
+
+  .traces {
+    left: 10%;
+    height: 25%;
+    bottom: 60%;
+  }
+
+  .blob {
+    right: 25%;
+    transform: scale(1.5);
+  }
+
+  /* FOOTER */
+  footer {
+    height: auto;
+    padding: 40px 60px;
+  }
+
+  .columns {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .column1,
+  .column2,
+  .column3 {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .column2 li.title,
+  .column3 li.title {
+    font-size: 30px;
+  }
+
+  .column2 li.subtitle,
+  .column3 li.subtitle {
+    font-size: 18px;
+  }
+
+  .column1 > img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .icons {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    justify-content: flex-start;
+    padding-top: 5rem;
+    gap: 20px;
+  }
+
+  .text-banner {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text-banner {
+    margin-right: -25%; /* aumenta a margem direita para empurrar o texto mais para direita */
+    text-align: right; /* alinha o texto à direita para ficar organizado */
+  }
+
+  .banner > button {
+	margin-right: -45%;
+	text-align: right;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .course .text > h1 {
+    font-size: 28px; /* diminui o texto */
+    max-width: 400px; /* limita a largura do texto para melhor layout */
+  }
+
+  .course > img {
+    width: 70%; /* aumenta a imagem */
+    max-width: none; /* remove limite para aproveitar o espaço */
+  }
+
+  .course {
+    gap: 10px; /* um espaçamento melhor entre texto e imagem */
+	height: 60vh;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px; /* Valor pequeno, mas importante */
+  }
+
+  .icons img {
+    width: 35px;
+    margin: 0; /* Remove margens externas */
+  }
+
+  /* Caso o gap não funcione, usar margin-right */
+  .icons img:not(:last-child) {
+    margin-right: 5px;
   }
 }
